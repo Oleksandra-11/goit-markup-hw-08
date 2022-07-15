@@ -1,0 +1,133 @@
+
+.current {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        margin-top: 28px;
+        background-color: var(--accent-color);
+        }
+}
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+    background-color: var(--primary-light-color);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.nav,
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.connect {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.connect__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.logo {
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    .header &{
+        margin-right: 93px;
+    }
+
+    &:hover,
+    &:focus {
+    text-decoration: none;
+    }
+}
+
+.logo-lightpart {
+    color: var(--accent-color);
+}
+
+.logo-blackpart {
+    color: var(--title-text-color);
+}
+
+.menu__link {
+    color: var(--title-text-color);
+    @include font(500, 14px, 1.14, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
+    text-decoration: none;
+    display: flex;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+}
+
+.menu__current {
+    color: var(--accent-color);
+}
+
+.connect__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .auth .mailto:hover &,
+    .auth .mailto:focus & {
+        color: var(--accent-color);
+    }
+}
+
+.connect__mailto,
+.connect__tel {
+    color: var(--primary-text-color);
+    @include font(500, 14px, 1.14, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+            color: var(--accent-color);
+        }
+}

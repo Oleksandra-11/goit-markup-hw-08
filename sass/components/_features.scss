@@ -1,0 +1,112 @@
+.features .features-2 {
+    display: flex;
+    align-items: center;
+}
+
+.section.features {
+    padding-bottom: 0;
+}
+
+.features__item::before {
+    content: '';
+    width: 270px;
+    height: 120px;
+    display: inline-block;
+    background-color: var(--background-ourteam-and-filtrbtn-color);
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: var(--primary-margin);
+}
+
+.features__item.icon-antenna::before {
+    background-image: url(../img/antenna.svg);
+}
+
+.features__item.icon-clock::before {
+    background-image: url(../img/clock.svg);
+}
+
+.features__item.icon-diagram::before {
+    background-image: url(../img/diagram.svg);
+}
+
+.features__item.icon-astronaut::before {
+    background-image: url(../img/astronaut.svg);
+}
+
+.features__item:not(:last-child) {
+    margin-right: var(--primary-margin);
+}
+
+.features-list {
+    display: flex;
+    align-content: center;
+}
+
+.features-list__img:not(:last-child) {
+    margin-right: var(--primary-margin);
+}
+
+.features__title {
+    color: var(--title-text-color);
+    @include font(700, 14px, 1.14, null);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.features__title-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.features-2__title {
+    color: var(--title-text-color);
+    @include font(700, 36px, 1.17, null);
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features__text {
+    @include font(null, 14px, 1.71, null);
+    // font-size: 14px;
+    // line-height: 1.71;
+}
+
+.features-list__text {
+    @include font(700, 14px, 1.14, 0.03em);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-light-color);
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.features-list__wrap {
+    position: relative;
+    width: 370px;
+}
+
+.features-list__card {
+    display: block;
+}
