@@ -506,32 +506,49 @@ ul {
 .clients__title {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
 
 .logos {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients {
-  padding-top: var(--primary-padding);
-  padding-bottom: var(--primary-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
+  }
 }
 
 .logos__item {
-  width: 170px;
-  height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: calc((100% - 30px) / 2);
 }
-.logos__item:not(:last-child) {
-  margin-right: var(--primary-margin);
+@media screen and (min-width: 768px) {
+  .logos__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logos__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 .logos__item:hover, .logos__item:hover .logos__icon {
   border-color: var(--accent-color);
@@ -916,11 +933,13 @@ ul {
 .ourprojects__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
 }
-
-.ourprojects__item:not(:nth-child(3n+3)) {
-  margin-right: var(--primary-margin);
+@media screen and (min-width: 1200px) {
+  .ourprojects__list {
+    margin-bottom: 94px;
+  }
 }
 
 .ourprojects__item:not(:nth-last-child(-n+3)) {
@@ -929,6 +948,17 @@ ul {
 
 .ourprojects__img {
   display: block;
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .ourprojects__img {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ourprojects__img {
+    max-width: 370px;
+  }
 }
 
 .ourprojects__card {
@@ -950,8 +980,18 @@ ul {
 }
 
 .ourprojects__item {
-  max-width: 370px;
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .ourprojects__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ourprojects__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .ourprojects__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

@@ -1,12 +1,16 @@
 .ourprojects__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 94px;
+    }
 }
 
-.ourprojects__item:not(:nth-child(3n+3)) {
-    margin-right: var(--primary-margin);
-}
+// .ourprojects__item:not(:nth-child(3n+3)) {
+//     margin-right: var(--primary-margin);
+// }
 
 .ourprojects__item:not(:nth-last-child(-n+3)) {
     margin-bottom: var(--primary-margin);
@@ -14,6 +18,13 @@
 
 .ourprojects__img {
     display: block;
+    max-width: 450px;
+    @media screen and (min-width: 768px) {
+            max-width: 354px;
+        }
+    @media screen and (min-width: 1200px) {
+            max-width: 370px;
+        }
 }
 
 .ourprojects__card {
@@ -37,9 +48,14 @@
 }
 
 .ourprojects__item {
-    max-width: 370px;
+    width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+     @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+    }
    
     &:hover {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
